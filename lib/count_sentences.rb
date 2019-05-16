@@ -17,8 +17,8 @@ class String
 
   def count_sentences
     binding.pry
-    delimiters = ()
-    self.split("."||"!"||"?").keep_if{|elem| elem.match?(/[a-z]/)}.length
+    
+    self.split(/[.!?]/).keep_if{|elem| elem.match?(/[a-z]/)}.length
     
   end
 end
